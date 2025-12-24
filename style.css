@@ -227,8 +227,9 @@ body {
 
 .plantTrendContent img {
   width: 100%;
+  cursor: pointer;
 }
-.popularTrendContent img:hover{
+.plantTrendContent img:hover{
   transform: scale(1.1);
   /* transform: translateY(-10px); */
   transition: transform 0.5s ease-in-out;
@@ -541,14 +542,17 @@ body {
   padding-top: 6rem;
   gap: 6rem;
   align-self: center;
+  cursor: pointer;
 }
 
 .commentContent {
   display: flex;
   flex-direction: column;
   max-width: 1000px;
+  cursor: pointer;
 
 }
+
 
 .commentCardOne h4 {
   font-family: Inter, sans-serif;
@@ -575,7 +579,9 @@ body {
   padding: 2rem 2rem;
   border-radius: 12px;
   align-items: center;
+  cursor: pointer;
 }
+
 
 .commentCardOneLine h5 {
   font-family: "Instrument Sans", sans-serif;
@@ -618,6 +624,7 @@ body {
   border-radius: 12px;
   align-items: center;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .commentCardThree h5 {
@@ -871,11 +878,12 @@ body {
     line-height: 18.72px;
     color: rgb(69, 69, 69);
   }
-  .popularTrendContent img:hover{
+  .plantTrendContent img:hover{
   transform: scale(1.1);
   /* transform: translateY(-10px); */
   transition: transform 0.5s ease-in-out;
   cursor: pointer;
+}
 }
 
   .commentHeader{
@@ -935,7 +943,7 @@ body {
   transition: transform 0.5s ease-in-out;
   cursor: pointer;
 }
-}
+
 @media (max-width:950px) {
   .headerParent{
     height: 100vh;
@@ -966,12 +974,7 @@ body {
       width: 100%;
       padding: 0 1rem;
     }
-    .popularTrendContent img:hover{
-  transform: scale(1.1);
-  /* transform: translateY(-10px); */
-  transition: transform 0.5s ease-in-out;
-  cursor: pointer;
-}
+
     .categoriesWrapper{
       max-width: 900px;
       margin: 0 auto;
@@ -1034,6 +1037,10 @@ body {
   .commentCardOneLine{
     width: 350px;
     height: 350px;
+  }
+  .commentCardOneLine :hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
   }
   .commentCardOneLine h5{
     padding-top: 3rem;
