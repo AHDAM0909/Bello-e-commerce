@@ -131,7 +131,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.headerContentShop {
+.shopBtn {
   margin-top: 2rem;
   background-color: #87ad35;
   align-items: center;
@@ -140,23 +140,15 @@ body {
   padding: 10px 10px;
   border-radius: 20px;
   color: rgb(255, 255, 255);
+  border: none;
+  transition: all 0.3s ease;
+  font-family: Inter, sans-serif;
+  cursor: pointer;
 }
-
-.headerContentShop a {
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  align-self: center;
+.shopBtn.active {
+  background-color:#202e02;
+  color: #fff;
 }
-
-.headerContentShop:hover {
-  background-color: #202e02;
-  transition: background-color 2s ease-in-out;
-}
-
 
 /* second Header styles */
 .secondWrapper {
@@ -320,32 +312,26 @@ body {
   margin-bottom: 1rem;
 }
 
-.secondbackgroundbutton {
+.flash-btn{
   margin: 0 auto;
   padding: 9px 9px;
   width: 110px;
   border-radius: 19px;
   border: 1px solid rgb(255, 255, 255);
+  transition: all 3s ease-in-out;
+  color: white;
+  background-color: transparent;
+  font-family: Inter, sans-serif;
 }
 
-.secondbackgroundbutton a {
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-
-.secondbackgroundbutton:hover {
+.flash-btn.active{
   background-color: rgb(255, 255, 255);
-  transition: background-color 2s ease-in-out;
+  color: #468d14;
 }
 
-.secondbackgroundbutton a:hover {
-  color: #062a2d;
-  transition: color 1s ease-in-out;
-}
+
+
+
 
 .categoriesWrapper {
   width: 100%;
@@ -682,30 +668,25 @@ body {
 }
 
 
-.lastBackgroundBtn {
+.shopBtnThree {
   margin-top: 2rem;
   background-color: #87ad35;
   align-items: center;
   width: 110px;
-  margin: 2rem auto;
+  margin: 3rem auto;
   padding: 10px 10px;
   border-radius: 20px;
   color: rgb(255, 255, 255);
+  border: none;
+  transition: all 0.3s ease;
+  font-family: Inter, sans-serif;
+  cursor: pointer;
 }
 
-.lastBackgroundBtn a {
-  text-decoration: none;
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
-  color: rgb(255, 255, 255);
-}
-
-.lastBackgroundBtn:hover {
-  background-color: #202e02;
-  transition: background-color 2s ease-in-out;
-}
+.shopBtnThree.active {
+  background-color:#202e02;
+  color: #fff;
+} 
 
 /* last icon styles */
 .lastBackgroundColor {
@@ -767,7 +748,7 @@ body {
 
 
 
-@media (max-width:1024px) {
+@media (max-width:1034px) {
 
   /* body{
     overflow-x: hidden;
@@ -777,6 +758,7 @@ body {
     width: 100%;
     left: 50%;
     right: 50%;
+    min-height: 50vh;
 
     background-size: cover;
     background-position: center top;
@@ -807,7 +789,6 @@ body {
     display: flex;
     justify-content: flex-start;
   }
-
   .navLinks {
     margin-left: 20rem;
     padding: 0;
@@ -976,17 +957,44 @@ body {
 
 @media (max-width:950px) {
   .headerParent {
-    height: 100vh;
+    height: 50vh;
+  }
+ .menuLinks {
+    display: block;
+    margin-left: 31rem;
+    border: 1px solid green;
+    cursor: pointer;
+  }
+   .menuLinks i {
+    color: #468d14;
+    font-size: 23px;
+    margin: 6px 6px;
   }
 
-  .navLinks {
-    display: none;
-  }
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    margin: 35px 35px;
+    gap: 0.70rem;
+    padding: 0;
+    align-items: center;
 
+  }
+.navLinks li a {
+    color: green;
+    margin: 0;
+    line-height: 35px;
+    padding: 0;
+    transition: all 3s ease-in-out;
+    font-size: 22px;
+   
+  }
   .navIcon {
     display: none;
   }
-
+.allLinks{
+  display: none;
+}
   .headerWrapper {
     max-width: 900px;
     margin: 0 auto;
@@ -994,7 +1002,7 @@ body {
   }
 
   .headerContent {
-    margin-top: 23rem;
+    margin-top: 3rem;
   }
 
   .secondWrapper {
@@ -1452,10 +1460,37 @@ body {
   .logo img {
     width: 60%;
   }
-
-  .navLinks {
-    display: none;
+.menuLinks {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid green;
+    cursor: pointer;
   }
+   .menuLinks i {
+    color: #468d14;
+    font-size: 13px;
+    margin: 6px 6px;
+  }
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    margin: 0 35px;
+    gap: 0;
+    padding: 0;
+    align-items: center;
+
+  }
+.navLinks li a {
+    color: green;
+    margin: 0;
+    line-height: 35px;
+    padding: 0;
+    transition: all 3s ease-in-out;
+    font-size: 12px;
+   
+  }
+  
 
   .navIcon {
     display: none;
@@ -1702,7 +1737,8 @@ body {
 
   .menuLinks {
     display: block;
-    margin-left: 7.5rem;
+    margin-left: 19.5rem;
+    margin: 0 7.5rem auto;
     border: 1px solid green;
     cursor: pointer;
 
@@ -1764,7 +1800,7 @@ body {
     color: rgb(255, 255, 255);
   }
 
-  .headerContentShop {
+  .shopBtn{
     margin-top: 2rem;
     background-color: #87ad35;
     align-items: center;
@@ -1775,15 +1811,10 @@ body {
     color: rgb(255, 255, 255);
   }
 
-  .headerContentShop a {
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 16px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    align-self: center;
-  }
+.shopBtn.active{
+  background-color: #202e02;
+  color: #fff;
+}
 
 
 
@@ -1883,32 +1914,22 @@ body {
     margin-bottom: 2rem;
   }
 
-  .secondbackgroundbutton {
-    margin: 0 auto;
-    padding: 9px 9px;
-    width: 110px;
-    border-radius: 19px;
-    border: 1px solid rgb(255, 255, 255);
-  }
+  .flash-btn{
+  margin: 0 auto;
+  padding: 9px 9px;
+  width: 110px;
+  border-radius: 19px;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 2s ease-in-out;
+  color: white;
+  background-color: transparent;
+  font-family: Inter, sans-serif;
+}
 
-  .secondbackgroundbutton a {
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 16px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-  }
-
-  .secondbackgroundbutton:hover {
-    background-color: rgb(255, 255, 255);
-    transition: background-color 2s ease-in-out;
-  }
-
-  .secondbackgroundbutton a:hover {
-    color: #062a2d;
-    transition: color 1s ease-in-out;
-  }
+.flash-btn.active{
+  background-color: rgb(255, 255, 255);
+  color: #468d14;
+}
 
   .categoriesWrapper {
     width: 100%;
@@ -2201,14 +2222,7 @@ body {
     margin-top: -4rem;
   }
 
-  .lastBackgroundBtn a {
-    text-decoration: none;
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-    color: rgb(255, 255, 255);
-  }
+
 
 
   .lastBackgroundContainer p {
@@ -2220,30 +2234,26 @@ body {
     margin-bottom: 1rem;
   }
 
-  .lastBackgroundBtn {
-    margin-top: 2rem;
-    background-color: #87ad35;
-    align-items: center;
-    width: 110px;
-    margin: 2rem auto;
-    padding: 10px 10px;
-    border-radius: 20px;
-    color: rgb(255, 255, 255);
-  }
+ .shopBtnThree {
+  margin-top: 2rem;
+  background-color: #87ad35;
+  align-items: center;
+  width: 110px;
+  margin: 3rem auto;
+  padding: 10px 10px;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  border: none;
+  transition: all 0.3s ease;
+  font-family: Inter, sans-serif;
+  cursor: pointer;
+}
 
-  .lastBackgroundBtn a {
-    text-decoration: none;
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 16px;
-    color: rgb(255, 255, 255);
-  }
+.shopBtnThree.active {
+  background-color:#202e02;
+  color: #fff;
+} 
 
-  .lastBackgroundBtn:hover {
-    background-color: #202e02;
-    transition: background-color 2s ease-in-out;
-  }
 
   .lastBackgroundColor {
     height: auto;
